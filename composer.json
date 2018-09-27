@@ -1,0 +1,25 @@
+{
+    "name": "node-link/cakephp-remember-me",
+    "description": "CakePHP plugin that performs Remember-me authentication with the new cookie algorithm of version 3.5 or later",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "remember", "cookie", "authentication", "authenticate", "security"],
+    "homepage": "https://github.com/node-link/cakephp-remember-me",
+    "license": "MIT",
+    "require": {
+        "cakephp/cakephp": "^3.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7.14|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NodeLink\\RememberMe\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NodeLink\\RememberMe\\Test\\": "tests/",
+            "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
+        }
+    }
+}
