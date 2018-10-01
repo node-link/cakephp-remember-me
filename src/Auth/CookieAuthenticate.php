@@ -88,7 +88,7 @@ class CookieAuthenticate extends BaseAuthenticate
      * Find user information from database based on cookie and config.
      *
      * @param string|array $cookie
-     * @return array
+     * @return array|null
      */
     protected function findUser($cookie)
     {
@@ -112,7 +112,9 @@ class CookieAuthenticate extends BaseAuthenticate
             $finder = key($finder);
         }
 
-        return $table->find($finder, $options)->first()->toArray();
+        $user = $table->find($finder, $options)->first();
+
+        return $user ? $user->toArray() : null;
     }
 
     /**
