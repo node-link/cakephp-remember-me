@@ -11,7 +11,7 @@ return [
         'cookie' => [
             'name' => 'remember_me',
             'expires' => '+1 year',
-            'path' => '',
+            'path' => '/',
             'domain' => '',
             'secure' => false,
             'httpOnly' => true,

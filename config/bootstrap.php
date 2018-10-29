@@ -7,7 +7,9 @@ use Cake\Http\Middleware\EncryptedCookieMiddleware;
 use Cake\Http\MiddlewareQueue;
 
 try {
-    Configure::load('NodeLink/RememberMe.app', 'default', true);
+    if (!Configure::check('RememberMe')) {
+        Configure::load('NodeLink/RememberMe.app', 'default');
+    }
 } catch (\Exception $e) {
     exit($e->getMessage() . "\n");
 }
